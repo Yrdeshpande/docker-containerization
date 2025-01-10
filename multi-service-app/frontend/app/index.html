@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Service App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome To Multi-Service App</h1>
+    <div class="message-box">
+        <p>Backend Response: <span id="backend-data">Loading...</span></p>
+    </div>
+    <script>
+        // Fetch data from the backend and display it
+        fetch('http://localhost:5000/')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('backend-data').innerText = data.message;
+            })
+            .catch(err => {
+                console.error('Error fetching data:', err);
+                document.getElementById('backend-data').innerText = 'Error fetching data!';
+                document.getElementById('backend-data').classList.add('error');
+            });
+    </script>
+</body>
+</html>

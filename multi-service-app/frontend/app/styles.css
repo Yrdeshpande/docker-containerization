@@ -1,0 +1,43 @@
+/* Center the title and the message box vertically */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Horizontally center the elements */
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Center the title with margin */
+h1 {
+    color: #333;
+    margin-bottom: 50px;  /* Adds space between title and message box */
+    text-align: center;
+}
+
+/* Styling the message box */
+.message-box {
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;  /* Ensures the box width doesn't exceed container */
+    text-align: center;
+    justify-content: center;  /* Vertically center the elements */
+}
+
+/* Styling for the message inside the box */
+.message-box span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Styling for error messages */
+.error {
+    color: #FF0000;
+}
